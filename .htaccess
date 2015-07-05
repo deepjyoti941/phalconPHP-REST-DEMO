@@ -3,5 +3,9 @@
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
 </IfModule>
-
 DirectoryIndex index.php
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "DELETE, PUT, GET"
+    Header set Access-Control-Allow-Headers: "X-Requested-With, Content-Type"
+</IfModule>
