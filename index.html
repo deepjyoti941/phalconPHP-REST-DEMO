@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My Favorite Wine</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="row spacing">
+			<div class="col-md-8">
+				<div class="form-group">
+					<input type="text" id="searchKey" class="form-control" placeholder="Search">
+				</div>
+			</div>
+			<div class="col-md-4">
+				<button type="submit" id="btnSearch" class="btn btn-default">Search</button>
+				<button type="submit" id="btnAdd" class="btn btn-default">Add Wine</button>
+			</div>
+		</div>
+		<hr>
+		<div class="row spacing">
+			<div class="col-md-3">
+				<ul id="wineList" class="list-group"></ul>
+			</div>
+			<form id="wineForm">
+				<div class="col-md-4">
+					<label>Id:</label>
+					<input id="wineId" class="form-control" name="id" type="text" disabled />
+
+					<label>Name:</label>
+					<input type="text" class="form-control" id="name" name="name" required>
+
+					<label>Grapes:</label>
+					<input type="text" class="form-control" id="grapes" name="grapes"/>
+
+					<label>Country:</label>
+					<input type="text" class="form-control" id="country" name="country"/>
+
+					<label>Region:</label>
+					<input type="text" class="form-control" id="region" name="region"/>
+
+					<label>Year:</label>
+					<input type="text" class="form-control" id="year" name="year"/>
+					</br>
+					<button class="btn btn-default" id="btnSave">Save</button>
+					<button class="btn btn-danger" id="btnDelete">Delete</button>
+				</div>
+				<div class="col-md-5">
+					<img id="pic" height="300" class="img-rounded"/>
+					</br>
+					<label>Notes:</label>
+					<textarea id="description" class="form-control" rows="8" style="resize:none" name="description"></textarea>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
